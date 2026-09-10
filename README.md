@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MaxenceLarose/jetgo/master/images/jetgo_banner.png" alt="jetgo" width="820">
+  <img src="https://raw.githubusercontent.com/MaxenceLarose/jetgo/main/images/jetgo_banner.png" alt="jetgo" width="820">
 </p>
 
 `jetgo` generates collider events, clusters the particles into jets, tags each jet with the color
