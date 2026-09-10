@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "jetgo"
 dynamic = ["version"]
-description = "Jet Event Toolkit for Generator-level Observables: generate collider events, find jets, tag their flavor, and save the observable data."
+description = "Jet Event Toolkit for Generator-level Observables (JETGO)"
 readme = "README.md"
 license = "BSD-3-Clause"
 license-files = ["LICENSE"]
