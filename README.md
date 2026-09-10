@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MaxenceLarose/jetgo/main/images/jetgo_banner.png" alt="jetgo" width="820">
+  <img src="https://raw.githubusercontent.com/MaxenceLarose/jetgo/main/images/banner.png" alt="jetgo" width="820">
 </p>
 
 <p align="center">

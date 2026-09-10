@@ -36,12 +36,12 @@ QUARK = "#D87363"
 GLUON = "#87C07E"
 BEAM = "#4A5068"
 
-WIDTH, HEIGHT = 8.55, 2.5
+WIDTH, HEIGHT = 8.15, 2.0
 OUT = Path(__file__).resolve().parent
 
 # The jet axis, and its recoil partner exactly opposite it.
-JET_ANGLE = 48.0
-JET_LENGTH = 1.02
+JET_ANGLE = 32.0
+JET_LENGTH = 0.88
 
 
 def face(*candidates, size, fallback):
@@ -58,8 +58,8 @@ def face(*candidates, size, fallback):
     return FontProperties(fname=findfont(FontProperties(family=fallback)), size=size)
 
 
-WORDMARK = face("Ubuntu-B.ttf", size=46, fallback="DejaVu Sans:bold")
-TAGLINE = face("Ubuntu-R.ttf", size=14, fallback="DejaVu Sans")
+WORDMARK = face("Ubuntu-B.ttf", size=40, fallback="DejaVu Sans:bold")
+TAGLINE = face("Ubuntu-R.ttf", size=12.5, fallback="DejaVu Sans")
 
 
 def shower(ax, x0, y0, angle, opening, n, length, color, seed):
@@ -107,17 +107,17 @@ ax.plot([vx], [vy], marker="o", markersize=5.5, color=PAPER, zorder=4)
 ax.plot([vx], [vy], marker="o", markersize=12.0, color=PAPER, alpha=0.14, zorder=3)
 
 # --- the rule ----------------------------------------------------------------------------------
-ax.plot([3.72, 3.72], [0.52, HEIGHT - 0.52], color=BEAM, linewidth=1.0, alpha=0.7, zorder=1)
+ax.plot([3.72, 3.72], [0.38, HEIGHT - 0.38], color=BEAM, linewidth=1.0, alpha=0.7, zorder=1)
 
 # --- the wordmark ------------------------------------------------------------------------------
-ax.text(4.18, vy + 0.22, "JETGO", fontproperties=WORDMARK, color=PAPER, ha="left", va="center")
+ax.text(4.18, vy + 0.19, "JETGO", fontproperties=WORDMARK, color=PAPER, ha="left", va="center")
 
-ax.text(4.24, vy - 0.56, "Jet Event Toolkit for Generating Observables",
+ax.text(4.24, vy - 0.45, "Jet Event Toolkit for Generating Observables",
         fontproperties=TAGLINE, color=MUTED, ha="left", va="center")
 
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 
 for suffix in ("svg", "png"):
-    path = OUT / f"jetgo_banner.{suffix}"
+    path = OUT / f"banner.{suffix}"
     fig.savefig(path, facecolor=INK, dpi=200)
     print("wrote", path)
