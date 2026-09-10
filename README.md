@@ -75,8 +75,9 @@ gluon-tagged counterparts, and the run metadata.
 
 # Documentation
 
-The [`docs/`](docs) directory holds the full documentation, including how to write your own
-observable or your own flavor tagger. Runnable scripts are in [`examples/`](examples).
+Full documentation lives at [maxencelarose.github.io/jetgo](https://maxencelarose.github.io/jetgo),
+including how to write your own observable or your own flavor tagger. Runnable scripts are in
+[`examples/`](examples).
 
 # License
 
