@@ -10,7 +10,7 @@
                         subpackages, so that importing ``jetgo`` never pulls in Pythia8 or FastJet.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __author__ = "Maxence Larose"
 __credits__ = ["Maxence Larose"]
