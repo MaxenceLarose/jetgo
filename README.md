@@ -37,6 +37,9 @@ from jetgo.observables import EEC
 from jetgo.simulation import EventGenerator, JetFinder, ParticleSelector, Simulator
 from jetgo.taggers import DescendancyTracing
 
+####################################################################################################
+#                                         Define simulator                                         #
+####################################################################################################
 event_generator = EventGenerator(
     beam_1=2212,
     beam_2=2212,
@@ -57,23 +60,32 @@ jet_finder = JetFinder(
     max_abs_pseudorapidity=1.6
 )
 
-observable = EEC(
-    bin_edges=np.geomspace(0.005, 0.8, 31),
-    charged_only=True,
-    use_pseudorapidity=True
-)
-
-jet_flavor_tagger = DescendancyTracing(
-    delta_r_max=0.4,
-    use_pseudorapidity=True
-)
-
 simulator = Simulator(
     event_generator=event_generator,
     particle_selector=particle_selector,
     jet_finder=jet_finder
 )
 
+####################################################################################################
+#                                        Define observables                                        #
+####################################################################################################
+observable = EEC(
+    bin_edges=np.geomspace(0.005, 0.8, 31),
+    charged_only=True,
+    use_pseudorapidity=True
+)
+
+####################################################################################################
+#                                          Define tagger                                           #
+####################################################################################################
+jet_flavor_tagger = DescendancyTracing(
+    delta_r_max=0.4,
+    use_pseudorapidity=True
+)
+
+####################################################################################################
+#                                               Run                                                #
+####################################################################################################
 simulator.simulate(
     n_events=100_000,
     observables=observable,
