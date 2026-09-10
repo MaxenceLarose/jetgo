@@ -4,9 +4,8 @@ jetgo
 *Jet Event Toolkit for Generating Observables.*
 
 ``jetgo`` generates collider events, clusters the particles into jets, tags each jet with the
-color charge of the parton that initiated it, and writes the observables out.
-
-You define the simulation, the observables and the tagger. ``jetgo`` runs the loop.
+color charge of the parton that initiated it, and writes the observables out. You define the
+simulator, the observables and the tagger. ``jetgo`` does the rest.
 
 .. code-block:: bash
 

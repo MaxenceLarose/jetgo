@@ -3,9 +3,8 @@
 </p>
 
 `jetgo` generates collider events, clusters the particles into jets, tags each jet with the color
-charge of the parton that initiated it, and writes the observables out.
-
-You define the simulator, the observables and the tagger. `jetgo` does the rest.
+charge of the parton that initiated it, and writes the observables out. You define the simulator,
+the observables and the tagger. `jetgo` does the rest.
 
 # Installation
 
