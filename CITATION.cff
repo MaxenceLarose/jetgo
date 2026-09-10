@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: If you use this software, please cite the article in preferred-citation below.
-title: "jetgo: Jet Event Toolkit for Generating Observables"
+title: "jetgo: Jet Event Toolkit for Generator-level Observables"
 abstract: >-
   A Python toolkit for generator-level jet studies. It generates collider events with PYTHIA8,
   clusters them into jets with FastJet, tags each jet's generator-level flavor, and writes the

@@ -1,7 +1,7 @@
 jetgo
 =====
 
-*Jet Event Toolkit for Generating Observables.*
+*Jet Event Toolkit for Generator-level Observables.*
 
 ``jetgo`` generates collider events with `pythia8mc <https://pypi.org/project/pythia8mc/>`_,
 clusters the particles into jets with `fastjet <https://pypi.org/project/fastjet/>`_, tags each jet

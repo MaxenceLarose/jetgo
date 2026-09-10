@@ -36,7 +36,7 @@ QUARK = "#D87363"
 GLUON = "#87C07E"
 BEAM = "#4A5068"
 
-WIDTH, HEIGHT = 8.15, 2.0
+WIDTH, HEIGHT = 8.45, 2.0
 OUT = Path(__file__).resolve().parent
 
 # The jet axis, and its recoil partner exactly opposite it.
@@ -112,7 +112,7 @@ ax.plot([3.72, 3.72], [0.38, HEIGHT - 0.38], color=BEAM, linewidth=1.0, alpha=0.
 # --- the wordmark ------------------------------------------------------------------------------
 ax.text(4.18, vy + 0.19, "JETGO", fontproperties=WORDMARK, color=PAPER, ha="left", va="center")
 
-ax.text(4.24, vy - 0.45, "Jet Event Toolkit for Generating Observables",
+ax.text(4.24, vy - 0.45, "Jet Event Toolkit for Generator-level Observables",
         fontproperties=TAGLINE, color=MUTED, ha="left", va="center")
 
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
