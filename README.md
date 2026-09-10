@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <i>The simplest way to simulate collider events and extract their jet observables.</i>
+  <i>The simplest way to generate collider events and extract their jet observables.</i>
 </p>
 
 <p align="center">
