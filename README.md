@@ -2,6 +2,18 @@
   <img src="https://raw.githubusercontent.com/MaxenceLarose/jetgo/main/images/jetgo_banner.png" alt="jetgo" width="820">
 </p>
 
+<p align="center">
+  <i>The simplest way to generate jet events and their observables in Python.</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.11+-blue.svg?logo=python&logoColor=white" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/PYTHIA-8.3+-orange.svg" alt="PYTHIA 8.3+">
+  <img src="https://img.shields.io/badge/FastJet-3.5+-9cf.svg" alt="FastJet 3.5+">
+  <a href="https://github.com/MaxenceLarose/jetgo/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-BSD--3--Clause-green.svg" alt="BSD-3-Clause license"></a>
+  <a href="https://pypi.org/project/jetgo/"><img src="https://img.shields.io/pypi/dm/jetgo?label=downloads&color=blue" alt="Downloads"></a>
+</p>
+
 `jetgo` generates collider events, clusters the particles into jets, tags each jet with the color
 charge of the parton that initiated it, and writes the observables out.
 
