@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jetgo"
+dynamic = ["version"]
+description = "Jet Event Toolkit for Generating Observables: generate collider events, find jets, tag their generator-level flavor, and save the observable data."
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "Maxence Larose", email = "maxence.larose@stonybrook.edu" }]
+maintainers = [{ name = "Maxence Larose", email = "maxence.larose@stonybrook.edu" }]
+keywords = [
+    "high-energy-physics",
+    "jets",
+    "jet-flavor",
+    "monte-carlo",
+    "pythia8",
+    "fastjet",
+    "energy-energy-correlator",
+    "qcd",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+# Pythia8 is deliberately absent: its wheels are Linux-only, and every observable and tagger
+# imports and runs without it. Only event generation needs it, so it lives in the extra below.
+dependencies = [
+    "numpy>=1.24",
+    "fastjet>=3.4",
+]
+
+[project.optional-dependencies]
+pythia = ["pythia8mc>=8.3"]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+docs = [
+    "sphinx>=7.2",
+    "numpydoc>=1.6",
+    "pydata-sphinx-theme>=0.15",
+]
+
+[project.urls]
+Homepage = "https://github.com/MaxenceLarose/jetgo"
+Documentation = "https://maxencelarose.github.io/jetgo"
+Repository = "https://github.com/MaxenceLarose/jetgo"
+Issues = "https://github.com/MaxenceLarose/jetgo/issues"
+
+[tool.hatch.version]
+path = "jetgo/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["jetgo"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/jetgo", "/tests", "/examples", "/README.md", "/LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "pythia: test requires a working Pythia8 installation (deselect with '-m \"not pythia\"')",
+]

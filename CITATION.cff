@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the article in preferred-citation below.
+title: "jetgo: Jet Event Toolkit for Generating Observables"
+abstract: >-
+  A Python toolkit for generator-level jet studies. It generates collider events with PYTHIA8,
+  clusters them into jets with FastJet, tags each jet's generator-level flavor, and writes the
+  observable data out.
+type: software
+authors:
+  - family-names: Larose
+    given-names: Maxence
+    email: maxence.larose@stonybrook.edu
+    affiliation: Stony Brook University
+repository-code: https://github.com/MaxenceLarose/jetgo
+license: BSD-3-Clause
+version: 0.1.0
+date-released: "2026-09-09"
+keywords:
+  - high energy physics
+  - jets
+  - jet flavor
+  - Monte Carlo
+  - PYTHIA8
+  - FastJet
+  - QCD
+
+# The paper this package was written for. GitHub's "Cite this repository" resolves to this
+# rather than to the software entry above.
+preferred-citation:
+  type: article
+  title: "The Colors of Jet Quenching"
+  authors:
+    - family-names: Bossi
+      given-names: Hannah
+    - family-names: Larose
+      given-names: Maxence
+    - family-names: Mehtar-Tani
+      given-names: Yacine
+  year: 2026
+  url: https://arxiv.org/abs/2609.05609
+  identifiers:
+    - type: other
+      value: "arXiv:2609.05609"
+      description: arXiv preprint identifier

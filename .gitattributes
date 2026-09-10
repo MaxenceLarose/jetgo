@@ -1,0 +1,6 @@
+# LF in the repository and in the working tree, on every platform.
+* text=auto eol=lf
+
+*.png binary
+*.pdf binary
+*.svg binary
