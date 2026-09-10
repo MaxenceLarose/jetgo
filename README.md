@@ -1,6 +1,6 @@
 # jetgo
 
-*Jet Event Toolkit for Generating Observables.*
+*Jet Event Toolkit for Generating Observables.* (JETGO)
 
 `jetgo` generates collider events, clusters the particles into jets, tags each jet with the color
 charge of the parton that initiated it, and writes the observables out.
