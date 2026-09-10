@@ -13,10 +13,10 @@
 
                         Each pair is weighted by (z_i * z_j)^n, where z_i = pT_i / pT_jet is the constituent's
                         momentum fraction of its own jet -- not by the raw (pT_i * pT_j)^n, so that a pair's
-                        weight means the same thing regardless of the absolute pT of the jet it came from (needed for e.g. a per-jet-normalized EEC to be a well-defined quantity across
-                        jets of different pT within the same window, see ``QuenchingFactorExtractor``). ΔR is
-                        computed manually from the rapidity (or, optionally, the pseudorapidity) and the azimuthal
-                        angle of each constituent.
+                        weight means the same thing regardless of the absolute pT of the jet it came from.
+                        That is what lets a per-jet-normalized EEC remain well defined across jets of
+                        different pT within one window. ΔR is computed manually from the rapidity (or,
+                        optionally, the pseudorapidity) and the azimuthal angle of each constituent.
 """
 
 from typing import Dict, List

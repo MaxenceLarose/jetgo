@@ -49,10 +49,10 @@ class DoubleDifferentialJetCrossSection(Observable):
             independent of the run length and consistent with the EEC, which has no choice in the matter (see
             ``Observable``).
 
-            The edges must be a *refinement* of every binning the analysis will later ask for: the extractors
-            finalize over the single bin ``[pt_min, pt_max]`` while ``PowerIndexExtractor`` uses five equal
-            sub-bins, so a grid dividing both reproduces them exactly. ``finalize`` re-bins by summing whole
-            bins and raises if the requested edges do not fall on this grid.
+            The edges must be a *refinement* of every binning you will later ask for. One analysis may
+            finalize over a single bin ``[pt_min, pt_max]`` while another wants five equal sub-bins, so a
+            grid dividing both reproduces them exactly. ``finalize`` re-bins by summing whole bins and
+            raises if the requested edges do not fall on this grid.
         max_abs_rapidity : Optional[float | int]
             Maximum absolute rapidity |y| used in the jet selection. Exactly one of ``max_abs_rapidity``/
             ``max_abs_pseudorapidity`` must be given -- whichever cut ``JetFinder`` was actually configured

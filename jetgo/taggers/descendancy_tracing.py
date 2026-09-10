@@ -64,9 +64,9 @@ class DescendancyTracing(JetFlavorTagger):
        "on the path" and may cast a vote, even though it isn't a jet constituent itself. This is needed because the
        search usually finds a candidate long before it reaches the constituent itself.
 
-       Mother pointers (``mother1()``/``mother2()``) are deliberately not used for either step, unlike
-       ``AncestryTracing``: PYTHIA8's color reconnection can rearrange which partons end up color-connected into
-       the same hadronizing string, so a hadron's recorded mother1()/mother2() can point somewhere entirely
+       Mother pointers (``mother1()``/``mother2()``) are deliberately not used for either step. PYTHIA8's
+       color reconnection can rearrange which partons end up color-connected into the same hadronizing
+       string, so a hadron's recorded mother1()/mother2() can point somewhere entirely
        disconnected from its true shower-emission history, even when a forward path from the hard parton to that
        hadron genuinely exists. Both steps here rely only on ``daughterListRecursive()``, which is unaffected by
        this and remains exhaustive.
@@ -455,10 +455,10 @@ class DescendancyTracing(JetFlavorTagger):
         max_steps: int = MAX_ANCESTRY_STEPS
     ) -> Optional[int]:
         """
-        Walk the mother lineage of ``event[start_index]`` back through ``mother1()`` as far as it goes, with no
-        stopping condition on status -- unlike ``AncestryTracing``, this does not stop at ``|status|`` == 23 or at
-        beam/ISR/MPI lineage, since the whole point is to reach past the two outgoing hard-scattering partons to
-        whatever initiated this branch of the event in the first place.
+        Walk the mother lineage of ``event[start_index]`` back through ``mother1()`` as far as it goes, with
+        no stopping condition on status. It does not stop at ``|status|`` == 23 or at beam/ISR/MPI lineage,
+        since the whole point is to reach past the two outgoing hard-scattering partons to whatever
+        initiated this branch of the event in the first place.
 
         Walking indiscriminately all the way to ``mother1() <= 0`` would overshoot past the useful parton-level
         history and land on the incoming beam proton itself, which is not a quark or a gluon. So instead, the

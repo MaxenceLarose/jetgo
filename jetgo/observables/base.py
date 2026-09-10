@@ -101,7 +101,7 @@ class Observable(ABC):
         """
         Normalize the histogram saved by ``to_dict`` onto ``bin_edges``.
 
-        Called downstream (by ``ObservableVisualizer`` or analysis code) -- never during the simulation itself.
+        Called downstream, by whatever plots or analyses the output -- never during the simulation itself.
         ``bin_edges`` cannot reopen the binning decision, which was made when the observable was constructed:
         it is the caller stating which edges it believes it is reading, and each subclass either serves it from
         the edges it was filled on or raises. Implementations must never silently return values on edges other

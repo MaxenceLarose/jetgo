@@ -74,3 +74,7 @@ testpaths = ["tests"]
 markers = [
     "pythia: test requires a working Pythia8 installation (deselect with '-m \"not pythia\"')",
 ]
+
+[tool.ruff]
+# Matches tests/test_style.py, which enforces this without needing a linter installed.
+line-length = 120
