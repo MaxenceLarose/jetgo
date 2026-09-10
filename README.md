@@ -29,12 +29,6 @@ You define the simulation, the observables and the tagger. `jetgo` runs the loop
 pip install jetgo[pythia]
 ```
 
-## Latest (possibly unstable) version
-
-```bash
-pip install "jetgo[pythia] @ git+https://github.com/MaxenceLarose/jetgo"
-```
-
 PYTHIA8 is an optional dependency because the `pythia8mc` wheels are Linux-only. Plain
 `pip install jetgo` works everywhere and gives you every observable and tagger; only event
 generation needs the extra. If you compiled PYTHIA8 yourself with its Python interface enabled,
