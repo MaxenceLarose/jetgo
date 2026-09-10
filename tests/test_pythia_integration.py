@@ -20,14 +20,16 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-pytest.importorskip("jetgo._pythia", reason="Pythia8 is not installed")
-
+from jetgo._pythia import PYTHIA8_AVAILABLE
 from jetgo.observables import DoubleDifferentialJetCrossSection, EEC
 from jetgo.simulation import EventGenerator, JetFinder, ParticleSelector, Simulator
 from jetgo.taggers import DescendancyTracing
 from jetgo.taggers.flavor import JetFlavor
 
-pytestmark = pytest.mark.pythia
+pytestmark = [
+    pytest.mark.pythia,
+    pytest.mark.skipif(not PYTHIA8_AVAILABLE, reason="Pythia8 is not installed"),
+]
 
 GOLDEN_FILE = Path(__file__).parent / "data" / "golden_run.json"
 

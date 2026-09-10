@@ -9,6 +9,8 @@
                         collision events with configurable beams, center-of-mass energy, and partonic phase space cuts.
 """
 
+from __future__ import annotations
+
 from .._pythia import pythia8
 
 

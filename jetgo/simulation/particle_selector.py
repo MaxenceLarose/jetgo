@@ -10,6 +10,8 @@
                         cut, and converts the survivors into FastJet PseudoJet objects.
 """
 
+from __future__ import annotations
+
 from typing import List, Optional
 
 import fastjet as fj
