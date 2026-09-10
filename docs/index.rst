@@ -5,8 +5,8 @@ jetgo
 
 ``jetgo`` generates collider events with `pythia8mc <https://pypi.org/project/pythia8mc/>`_,
 clusters the particles into jets with `fastjet <https://pypi.org/project/fastjet/>`_, tags each jet
-with the color charge of the parton that initiated it, and writes the observables out. You define
-the simulator, the observables and the tagger, ``jetgo`` does the rest.
+with the color charge of the parton that initiated it, and writes the observables out. All you define
+is the simulator, the observables and the tagger.
 
 .. code-block:: bash
 
