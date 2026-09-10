@@ -3,10 +3,10 @@ jetgo
 
 *Jet Event Toolkit for Generating Observables.*
 
-``jetgo`` generates collider events, clusters the particles into jets, tags each jet with the
-color charge of the parton that initiated it, and writes the observables out.
-
-You define the simulator, the observables and the tagger. ``jetgo`` does the rest.
+``jetgo`` generates collider events with `pythia8mc <https://pypi.org/project/pythia8mc/>`_,
+clusters the particles into jets with `fastjet <https://pypi.org/project/fastjet/>`_, tags each jet
+with the color charge of the parton that initiated it, and writes the observables out. You define
+the simulator, the observables and the tagger. ``jetgo`` does the rest.
 
 .. code-block:: bash
 

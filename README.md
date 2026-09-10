@@ -14,10 +14,10 @@
   <a href="https://pypi.org/project/jetgo/"><img src="https://img.shields.io/pypi/dm/jetgo?label=downloads&color=blue" alt="Downloads"></a>
 </p>
 
-`jetgo` generates collider events, clusters the particles into jets, tags each jet with the color
-charge of the parton that initiated it, and writes the observables out.
-
-You define the simulator, the observables and the tagger. `jetgo` does the rest.
+`jetgo` generates collider events with [pythia8mc](https://pypi.org/project/pythia8mc/), clusters
+the particles into jets with [fastjet](https://pypi.org/project/fastjet/), tags each jet with the
+color charge of the parton that initiated it, and writes the observables out. You define the
+simulator, the observables and the tagger. `jetgo` does the rest.
 
 # Installation
 
