@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/PYTHIA-8.3+-orange.svg" alt="PYTHIA 8.3+">
   <img src="https://img.shields.io/badge/FastJet-3.5+-9cf.svg" alt="FastJet 3.5+">
   <a href="https://github.com/MaxenceLarose/jetgo/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-BSD--3--Clause-green.svg" alt="BSD-3-Clause license"></a>
-  <a href="https://pypi.org/project/jetgo/"><img src="https://img.shields.io/pypi/dm/jetgo?label=downloads&color=blue" alt="Downloads"></a>
+  <a href="https://pepy.tech/projects/jetgo"><img src="https://static.pepy.tech/badge/jetgo" alt="Downloads"></a>
 </p>
 
 `jetgo` generates collider events with [pythia8mc](https://pypi.org/project/pythia8mc/), clusters
