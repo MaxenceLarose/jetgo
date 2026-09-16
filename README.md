@@ -119,7 +119,7 @@ This project is licensed under the terms of the [BSD 3-Clause License](LICENSE).
 
 # Citation
 
-If you use `jetgo` in your work, please cite the paper it was written for:
+If you use `jetgo` in your work, please cite the paper it was written for and the code:
 
 ```bibtex
 @article{Bossi:2026colors,
@@ -130,6 +130,15 @@ If you use `jetgo` in your work, please cite the paper it was written for:
   archivePrefix = {arXiv},
   primaryClass  = {hep-ph},
   url           = {https://arxiv.org/abs/2609.05609}
+}
+
+@misc{Larose:2026jetgo,
+  author        = {Larose, Maxence},
+  title         = {{jetgo: Jet Event Toolkit for Generator-level Observables}},
+  year          = {2026},
+  howpublished  = {\url{https://github.com/MaxenceLarose/jetgo}},
+  note          = {Version 0.1.4},
+  url           = {https://github.com/MaxenceLarose/jetgo}
 }
 ```
 
